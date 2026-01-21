@@ -1,53 +1,48 @@
-# React Shopping Cart
+# Shopping Cart (React)
 
-A simple shopping cart built with React to practice core React fundamentals.
+A simple shopping cart built with React to practice core state management concepts.
 
----
+## Features
 
-## What it does
+- Display a list of products with prices
+- Add products to the cart
+- Increase and decrease item quantities
+- Remove items from the cart
+- Automatically remove items when quantity reaches zero
+- Display total number of items in the cart
+- Display cart subtotal
+- Reset the shopping cart
 
-- Displays a list of products
-- Adds products to a cart
-- Uses quantities instead of duplicate items
-- Increases / decreases item quantity
-- Removes items when quantity reaches zero
-- Shows total item count
-- Shows total price
-- Handles empty cart state
-- Allows resetting the cart
+## Key Concepts Practiced
 
----
-
-## Concepts practiced
-
-- `useState`
-- Single source of truth
+- React `useState`
 - Immutable state updates
-- Derived data
-- Conditional rendering
-- Component extraction
-- Props and callbacks
+- Identity-based updates (`id`)
+- Derived data (totals calculated during render)
+- Array methods: `map`, `filter`, `reduce`, `some`
+- Separation of product data and cart state
 
----
+## Project Structure
 
-## Component structure
+- `PRODUCTS`: static product catalog
+- `cart`: state holding cart items and quantities
+- `ProductsList`: renders products and handles adding to cart
+- `ShoppingCart`: renders cart items, totals, and controls
 
-```
-App
-├── ProductList
-├── Cart
-│   └── CartItem
-```
+## How It Works
 
----
+- Products are added to the cart with an initial quantity of `1`
+- Adding the same product increases its quantity
+- Quantities are updated immutably
+- Totals are derived from cart state and not stored separately
 
-## Run locally
+## Run Locally
 
 ```bash
 npm install
-npm run dev
+npm start
 ```
 
----
+## Notes
 
-Built as a focused React fundamentals exercise.
+This project is intended for learning and practicing React fundamentals. It does not include persistence, routing, or external state management.
