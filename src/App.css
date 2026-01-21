@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  box-sizing: content-box;
+}
+
+.body {
+  border: 1px solid red;
+  width: 400px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.products {
+  border: 1px solid blue;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+  gap: 5px 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart {
+  border: 1px solid green;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
+  height: 250px;
+  overflow-y: scroll;
+}
+
+span {
+  padding: 10px 0;
+}
